@@ -1,6 +1,7 @@
 
 import './App.css';
 import axios from 'axios';
+import {action, Originals} from './urls'
 import { useState } from 'react'
 import Banner from './components/Banner/Banner';
 import NavBar from './components/NavBar/NavBar';
@@ -12,7 +13,10 @@ function App() {
     <div className="App">
       <NavBar />
       <Banner />
-      <Rowpost />
+      <Rowpost url={Originals} title='Netflix Originals'/>
+      <Rowpost url={action} title='Action' isSmall/>
+      {/* <Rowpost url={action} title='Action' isSmall/> */}
+
     </div>
   );
 }
